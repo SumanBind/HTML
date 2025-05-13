@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Input From Users</title>
+    <style>
+        fieldset {
+            width: 300px;
+            padding: 20px;
+            margin: 50px auto;
+            border: 2px solid #4a7af3;
+            border-radius: 10px;
+            background-color: #f88bd3;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #68c2f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #52a1e7;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <label>Enter First number</label>
+        <input type="number" id="Textbox1">
+        <label>Enter 2nd number</label>
+        <input type="number" id="Textbox2">
+        <label id="abcd" >Result</label>
+        <input type="text" id="result" readonly>
+        <button onclick="calculate()">Result</button>
+    </fieldset>
+
+    <script>
+        function calculate() {
+            let a = parseFloat(document.getElementById("Textbox1").value);
+            let b = parseFloat(document.getElementById("Textbox2").value);
+            let c = a + b;
+            document.getElementById("result").value = c;
+            document.getElementById("abcd").innerHTML = c;
+        }
+    </script>
+</body>
+</html>
